@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>evkey</id>
+    <version>5.0.1</version>
+    <packageSourceUrl>https://github.com/wanwanvxt/chocolatey-packages/tree/main/evkey</packageSourceUrl>
+    <owners>wanwan</owners>
+
+    <title>EVKey (Portable)</title>
+    <authors>lamquangminh</authors>
+    <projectUrl>https://evkeyvn.com/</projectUrl>
+    <iconUrl>http://rawcdn.githack.com/wanwanvxt/chocolatey-packages/main/icons/EVKey.png</iconUrl>
+    <copyright>lamquangminh</copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/lamquangminh/EVKey</projectSourceUrl>
+    <docsUrl>https://evkeyvn.com/</docsUrl>
+    <mailingListUrl>https://evkeyvn.com/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/lamquangminh/EVKey/issues</bugTrackerUrl>
+    <tags>evkey keyboard vietnamese telex vni viqr</tags>
+    <summary>Vietnamese Keyboard</summary>
+    <description># EVKey
+Vietnamese Keyboard - Bộ gõ tiếng Việt cho PC</description>
+    <releaseNotes>update Windows 5.0.1, Mac 3.3.8</releaseNotes>
+
+    <!--<dependencies></dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
