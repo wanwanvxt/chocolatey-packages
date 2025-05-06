@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>systeminformer</id>
+    <version>3.2.25011</version>
+    <packageSourceUrl>https://github.com/wanwanvxt/chocolatey-packages/tree/main/systeminformer</packageSourceUrl>
+    <owners>wanwan</owners>
+
+    <title>System Informer (Install)</title>
+    <authors>Winsider Seminars &amp; Solutions, Inc.</authors>
+    <projectUrl>https://systeminformer.com/</projectUrl>
+    <iconUrl>http://rawcdn.githack.com/wanwanvxt/chocolatey-packages/main/icons/systeminformer.png</iconUrl>
+    <copyright>Winsider Seminars &amp; Solutions, Inc.</copyright>
+    <licenseUrl>https://github.com/winsiderss/systeminformer/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/winsiderss/systeminformer</projectSourceUrl>
+    <docsUrl>https://systeminformer.com/readme</docsUrl>
+    <mailingListUrl>https://windows-internals.com/contact-us/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/winsiderss/systeminformer/issues</bugTrackerUrl>
+    <tags>windows debugger security benchmarking process-manager performance monitor monitoring realtime administrator process-monitor performance-tuning profiling monitor-performance performance-monitoring task-manager system-monitor processhacker systeminformer</tags>
+    <summary>A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.</summary>
+    <description># System Informer
+
+A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware. Brought to you by Winsider Seminars &amp; Solutions, Inc.
+
+## System requirements
+
+Windows 10 or higher, 32-bit or 64-bit.
+
+## Features
+
+* A detailed overview of system activity with highlighting.
+* Graphs and statistics allow you quickly to track down resource hogs and runaway processes.
+* Can't edit or delete a file? Discover which processes are using that file.
+* See what programs have active network connections, and close them if necessary.
+* Get real-time information on disk access.
+* View detailed stack traces with kernel-mode, WOW64 and .NET support.
+* Go beyond services.msc: create, edit and control services.
+* Small, portable and no installation required.
+* 100% [Free Software](https://www.gnu.org/philosophy/free-sw.en.html) ([MIT](https://opensource.org/licenses/MIT))</description>
+    <!-- <releaseNotes></releaseNotes> -->
+
+    <!--<dependencies></dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
