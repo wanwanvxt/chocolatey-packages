@@ -2,23 +2,16 @@ $ErrorActionPreference = 'Stop'
 
 $packageName = $env:ChocolateyPackageName
 $url = 'https://github.com/lamquangminh/EVKey/releases/download/Release/EVKey.zip'
-$archiveChecksum = '4f1adbd4875cf224180132fcf63ea08a'
-$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$archiveFilePath = Join-Path -Path $toolsDir -ChildPath 'EVKey.zip'
+$archiveChecksum = '9671472133e5561eeff67ad7237c927d2acaa779e158c02c97d1504deee46734'
 $unzipLocation = Join-Path -Path (Get-ToolsLocation) -ChildPath $packageName
 
-Get-ChocolateyWebFile -PackageName $packageName `
-                      -FileFullPath $archiveFilePath `
-                      -Url $url `
-                      -Checksum $archiveChecksum `
-                      -ChecksumType 'md5'
+Install-ChocolateyZipPackage -PackageName $packageName `
+                              -UnzipLocation $unzipLocation `
+                              -Url $url `
+                              -Checksum $archiveChecksum `
+                              -ChecksumType 'sha256'
 
 $pp = Get-PackageParameters
-Get-ChocolateyUnzip -PackageName $packageName `
-                    -FileFullPath $archiveFilePath `
-                    -unzipLocation $unzipLocation
-
-Remove-Item -Path $archiveFilePath -Force -ErrorAction SilentlyContinue
 
 $executables = @(
   @{ Name = 'evkau'; Display = 'EVKey Updater' },
@@ -29,11 +22,6 @@ $executables = @(
 foreach ($exe in $executables) {
   $exePath = Join-Path $unzipLocation "$($exe.Name).exe"
   $linkName = "$($exe.Display).lnk"
-  $shimName = $exe.Name
-
-  if (!$pp.NoShim) {
-    Install-BinFile -Name $shimName -Path $exePath -UseStart
-  }
 
   if (!$pp.NoDesktopShortcut) {
     $desktopDir = [Environment]::GetFolderPath([Environment+SpecialFolder]::DesktopDirectory)

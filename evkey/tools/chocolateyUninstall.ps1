@@ -1,5 +1,9 @@
 $ErrorActionPreference = 'Stop'
 
+$packageName = $env:ChocolateyPackageName
+$unzipLocation = Join-Path -Path (Get-ToolsLocation) -ChildPath $packageName
+Remove-Item -Path $unzipLocation -Recurse -Force -ErrorAction SilentlyContinue
+
 $executables = @(
   @{ Name = 'evkau'; Display = 'EVKey Updater' },
   @{ Name = 'EVKey32'; Display = 'EVKey 32-bit' },
@@ -11,10 +15,7 @@ $programsDir = [Environment]::GetFolderPath([Environment+SpecialFolder]::Program
 $evkeyProgramsDir = Join-Path $programsDir 'EVKey'
 
 foreach ($exe in $executables) {
-  $shimName = $exe.Name
   $linkName = "$($exe.Display).lnk"
-
-  Uninstall-BinFile -Name $shimName
 
   $desktopShortcut = Join-Path $desktopDir $linkName
   if (Test-Path -Path $desktopShortcut) {
