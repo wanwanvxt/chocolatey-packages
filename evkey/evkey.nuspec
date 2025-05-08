@@ -20,7 +20,12 @@
     <tags>evkey keyboard vietnamese telex vni viqr</tags>
     <summary>Vietnamese Keyboard</summary>
     <description># EVKey
-Vietnamese Keyboard - Bộ gõ tiếng Việt cho PC</description>
+Vietnamese Keyboard - Bộ gõ tiếng Việt cho PC
+
+## Package parameters
+`/NoDesktopShortcut`: Option out of creating a Desktop shortcut.
+`/NoProgramsShortcut`: Option out of creating Program shortcuts in Start Menu.
+`/Start`: Automatically start EVKey after installation completed</description>
     <releaseNotes>update Windows 5.0.1, Mac 3.3.8</releaseNotes>
 
     <!--<dependencies></dependencies>-->
