@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>FreeDownloadManager</id>
+    <version>6.27.0</version>
+    <packageSourceUrl>https://github.com/wanwanvxt/chocolatey-packages/tree/main/FreeDownloadManager</packageSourceUrl>
+    <owners>wanwan</owners>
+
+    <title>Free Download Manager</title>
+    <authors>Free Download Manager.ORG</authors>
+    <projectUrl>https://www.freedownloadmanager.org/</projectUrl>
+    <iconUrl>http://rawcdn.githack.com/wanwanvxt/chocolatey-packages/main/icons/FreeDownloadManager.png</iconUrl>
+    <copyright>2004 - 2025 Free Download Manager.ORG</copyright>
+    <licenseUrl>https://www.freedownloadmanager.org/privacy.htm</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <!-- <projectSourceUrl></projectSourceUrl> -->
+    <docsUrl>https://www.freedownloadmanager.org/board/</docsUrl>
+    <mailingListUrl>https://www.freedownloadmanager.org/support.htm</mailingListUrl>
+    <bugTrackerUrl>https://www.freedownloadmanager.org/board/</bugTrackerUrl>
+    <tags>free-download-manager download manager free web files speed ftp bittorrent</tags>
+    <summary>Free Download Manager</summary>
+    <description># Free Download Manager
+
+It's a powerful modern download accelerator and organizer for  [Windows](https://www.freedownloadmanager.org/download.htm),  [macOS](https://www.freedownloadmanager.org/download-fdm-for-mac.htm),  [Android](https://www.freedownloadmanager.org/download-fdm-for-android.htm), and  [Linux](https://www.freedownloadmanager.org/download-fdm-for-linux.htm).
+
+## Free Download Manager features
+-   Fast, safe and efficient downloading
+-   Video downloading from popular websites
+-   Torrents and magnet links downloads
+-   Proxy support
+-   HTTP/HTTPS/FTP/BitTorrent support
+-   User-friendly interface with modern design
+-   Support for Windows, macOS, Android, and Linux
+
+**Free Download Manager**  for Windows, macOS, Android, and Linux allows you to adjust traffic usage, organize downloads, control file priorities for torrents, efficiently download large files and resume broken downloads.
+
+**FDM**  can boost all your downloads up to 10 times, process media files of various popular formats, drag&amp;drop URLs right from a web browser as well as simultaneously download multiple files!
+
+Our internet download manager is compatible with the most popular browsers: Google Chrome, Mozilla Firefox, Microsoft Edge and Internet Explorer. [See more features](https://www.freedownloadmanager.org/features.htm).
+
+### Supported languages
+-   English
+-   Spanish
+-   German
+-   French
+-   Portuguese
+-   Romanian
+-   Polish
+-   Dutch
+-   Swedish
+-   Italian
+-   Danish
+-   Chinese
+-   Vietnamese
+-   Turkish
+-   Indonesian</description>
+    <releaseNotes></releaseNotes>
+
+    <!--<dependencies></dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
