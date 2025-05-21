@@ -37,7 +37,20 @@ Windows 10 or higher, 32-bit or 64-bit.
 * View detailed stack traces with kernel-mode, WOW64 and .NET support.
 * Go beyond services.msc: create, edit and control services.
 * Small, portable and no installation required.
-* 100% [Free Software](https://www.gnu.org/philosophy/free-sw.en.html) ([MIT](https://opensource.org/licenses/MIT))</description>
+* 100% [Free Software](https://www.gnu.org/philosophy/free-sw.en.html) ([MIT](https://opensource.org/licenses/MIT))
+
+## ⚠️ VirusTotal False Positives Notice:
+
+Some antivirus engines may flag this package as potentially harmful. This is a known issue and has been discussed by the developers of System Informer. These are **false positives**, and the software is **open-source** and actively maintained. You can find more information and confirmations from the official developers here:
+
+ - [# Avast detects the driver as vulnerable - GitHub Issue #1908](https://github.com/winsiderss/systeminformer/issues/1908)
+ - [Windows Defender flagged as a virus and crashed - GitHub Issue #1722](https://github.com/winsiderss/systeminformer/issues/1722)
+ - [Antivirus false alarms: can we fight them? - GitHub Issue #1715](https://github.com/winsiderss/systeminformer/issues/1715)
+ - [# System Informed flagged as a Potentially Unwanted Application - GitHub Issue #1668](https://github.com/winsiderss/systeminformer/issues/1668)
+ - [W11 Pro: Trojan:Win32/Sabsik.TE.B!ml detected by Windows Defender out of the blue - GitHub Issue # #1665](https://github.com/winsiderss/systeminformer/issues/1665)
+
+If you have concerns, feel free to verify the SHA256 checksum and inspect the source code on the official GitHub repository:
+👉 [https://github.com/winsiderss/systeminformer](https://github.com/winsiderss/systeminformer)</description>
     <!-- <releaseNotes></releaseNotes> -->
 
     <!--<dependencies></dependencies>-->
