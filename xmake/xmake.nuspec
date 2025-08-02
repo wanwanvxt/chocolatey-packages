@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xmake</id>
-    <version>2.9.9</version>
+    <version>3.0.1</version>
     <packageSourceUrl>https://github.com/wanwanvxt/chocolatey-packages/tree/main/xmake</packageSourceUrl>
     <owners>wanwan</owners>
 
@@ -31,88 +31,58 @@ If you want to know more, please refer to: the [Documentation](https://xmake.io/
 ![](https://xmake.io/assets/img/index/xmake-basic-render.gif)</description>
     <releaseNotes>### New features
 
-* [#6137](https://github.com/xmake-io/xmake/issues/6137): IDE integration
-* [#6138](https://github.com/xmake-io/xmake/issues/6138): Use libxmake to build binary with xmake lua apis
-* [#6154](https://github.com/xmake-io/xmake/issues/6154): Add kotlin language and kotlin-native compiler and packages support
-* [#6279](https://github.com/xmake-io/xmake/pull/6279): Add msvc midl support
-
-### Changes
-
-* [#6182](https://github.com/xmake-io/xmake/pull/6182): Support msstl modules for clang
-* [#6281](https://github.com/xmake-io/xmake/pull/6281): Support Verilator target build to shared library
-* [#6270](https://github.com/xmake-io/xmake/pull/6270): Improve conan generator
-* [#6243](https://github.com/xmake-io/xmake/pull/6243): Improve llvm toolchain to support for cross platform
-* Support for CMake 4.0
+* [#4810](https://github.com/xmake-io/xmake/issues/4810): Add Native XCode project generator plugin
 
 ### Bugs fixed
 
-* [#6292](https://github.com/xmake-io/xmake/issues/6292): Fix namespace issue
-
+* [#6592](https://github.com/xmake-io/xmake/pull/6592): Fix objects only links
+* [#6586](https://github.com/xmake-io/xmake/issues/6586): Fix build.fence policy
+* [#6600](https://github.com/xmake-io/xmake/issues/6600): Fix compile_commands generator for c++modules
+* [#6621](https://github.com/xmake-io/xmake/issues/6621): Fix android build for ndk r17c
+* [#6635](https://github.com/xmake-io/xmake/discussions/6635): Fix batchcmds for qt/moc
 
 ### 新特性
 
-* [#6137](https://github.com/xmake-io/xmake/issues/6137): IDE 整合
-* [#6138](https://github.com/xmake-io/xmake/issues/6138): 使用 libxmake/xmake APIs 去构建二进制
-* [#6154](https://github.com/xmake-io/xmake/issues/6154): 添加 kotlin native 构建支持和包依赖集成支持
-* [#6279](https://github.com/xmake-io/xmake/pull/6279): 添加 msvc midl 支持
-
-### 改进
-
-* [#6182](https://github.com/xmake-io/xmake/pull/6182): 改进 clang/clang-cl 支持 msstl 模块
-* [#6281](https://github.com/xmake-io/xmake/pull/6281): 支持 Verilator 动态库
-* [#6270](https://github.com/xmake-io/xmake/pull/6270): 改进 conan 生成器
-* [#6243](https://github.com/xmake-io/xmake/pull/6243): 改进 llvm 工具链对交叉编译的支持
-* 三方包安装支持 CMake 4.0
+* [#4810](https://github.com/xmake-io/xmake/issues/4810): 添加新的原生 Xcode 工程生成插件
 
 ### Bugs 修复
 
-* [#6292](https://github.com/xmake-io/xmake/issues/6292): 修复 namespace 问题
+* [#6592](https://github.com/xmake-io/xmake/pull/6592): 修复 object 目标的链接问题
+* [#6586](https://github.com/xmake-io/xmake/issues/6586): 修复 build.fence 策略
+* [#6600](https://github.com/xmake-io/xmake/issues/6600): 修复 compile_commands 生成器
+* [#6621](https://github.com/xmake-io/xmake/issues/6621): 修复 android ndk r17c 构建失败问题
+* [#6635](https://github.com/xmake-io/xmake/discussions/6635): 修复 batchcmds 导致的 qt/moc 增量构建问题
 
 ## What's Changed
-* package.tools.cmake: Set CMAKE_SYSTEM_PROCESSOR when cross-compiling by @SirLynix in https://github.com/xmake-io/xmake/pull/6145
-* Rename output makefile -> Makefile. by @per1cycle in https://github.com/xmake-io/xmake/pull/6146
-* Improve targetname input checks by @Shiffted in https://github.com/xmake-io/xmake/pull/6142
-* feat: improve GN tool to support extra arguments by @poirierlouis in https://github.com/xmake-io/xmake/pull/6149
-* Add kotlin language and kotlin-native compiler support by @waruqi in https://github.com/xmake-io/xmake/pull/6153
-* Remove msystem include on msys2 by @star-hengxing in https://github.com/xmake-io/xmake/pull/6151
-* Fix clang-cl toolchain for msvc-wine by @star-hengxing in https://github.com/xmake-io/xmake/pull/6164
-* Fix clang-cl toolchain with lto by @star-hengxing in https://github.com/xmake-io/xmake/pull/6167
-* feat(utils.archive): Add zstd support for utils.archive by @24bit-xjkp in https://github.com/xmake-io/xmake/pull/6168
-* Add kotlin native package support by @waruqi in https://github.com/xmake-io/xmake/pull/6170
-* Pass more options from `package:find_tool` to `lib.detect.find_tool` by @Doekin in https://github.com/xmake-io/xmake/pull/6172
-* Improve clang toolcahin for building package with lto by @star-hengxing in https://github.com/xmake-io/xmake/pull/6177
-* Improve to select vs toolset by @waruqi in https://github.com/xmake-io/xmake/pull/6179
-* fix wine/cl output encoding #6191 by @waruqi in https://github.com/xmake-io/xmake/pull/6192
-* switch to windows 2025 by @waruqi in https://github.com/xmake-io/xmake/pull/6194
-* Support msstl modules for clang by @star-hengxing in https://github.com/xmake-io/xmake/pull/6182
-* meson: Force to use vs env on Windows by @SirLynix in https://github.com/xmake-io/xmake/pull/6219
-* fix(raddbg): make rad debugger open as detached by @Gaweringo in https://github.com/xmake-io/xmake/pull/6220
-* meson: Add cmake search env by @SirLynix in https://github.com/xmake-io/xmake/pull/6222
-* devel: enable verbose for git clone by @Sunrisepeak in https://github.com/xmake-io/xmake/pull/6225
-* improve find_program by @waruqi in https://github.com/xmake-io/xmake/pull/6229
-* package(cmake): fix incorrect flag handling caused by substring matching by @Doekin in https://github.com/xmake-io/xmake/pull/6236
-* toolchain(cross): use target-specific `objcopy` by @Doekin in https://github.com/xmake-io/xmake/pull/6240
-* toolchain(llvm): preliminary support for `cross` platform by @Doekin in https://github.com/xmake-io/xmake/pull/6243
-* fix compile_commands with nvcc by @xq114 in https://github.com/xmake-io/xmake/pull/6251
-* (C++ modules) disable std module on some tests by @Arthapz in https://github.com/xmake-io/xmake/pull/6249
-* [fix] xmake install skips SO with version like libfreetype.so.6.20.2 by @19317362 in https://github.com/xmake-io/xmake/pull/6257
-* srcenv.profile: additional detection of xmake binary in `core/build` by @Doekin in https://github.com/xmake-io/xmake/pull/6265
-* improve conan generator by @waruqi in https://github.com/xmake-io/xmake/pull/6270
-* fix unknown package tips by @Shiffted in https://github.com/xmake-io/xmake/pull/6277
-* Fix git clone failure by @Elite-stay in https://github.com/xmake-io/xmake/pull/6288
-* [toolchains(armclang)] fix target and cpu flags for MDK by @jnshuiji in https://github.com/xmake-io/xmake/pull/6286
-* Add msvc midl support by @star-hengxing in https://github.com/xmake-io/xmake/pull/6279
-* feat(verilator): Support Verilator target build to shared library by @TimeKeepper in https://github.com/xmake-io/xmake/pull/6281
-* fix namespace #6292 by @waruqi in https://github.com/xmake-io/xmake/pull/6293
+* Improve conan to support for wasm by @waruqi in https://github.com/xmake-io/xmake/pull/6559
+* Do not add -fsanitize flags to msvc linker by @DownerCase in https://github.com/xmake-io/xmake/pull/6567
+* Update Qt ts rule by @RC1844 in https://github.com/xmake-io/xmake/pull/6582
+* Use pairs iterator for project.options instead of ipairs by @A2va in https://github.com/xmake-io/xmake/pull/6581
+* Fix attempt to index a nil value by @star-hengxing in https://github.com/xmake-io/xmake/pull/6587
+* feat(test): Support expected-failure tests via should_fail option by @romeoxbm in https://github.com/xmake-io/xmake/pull/6588
+* feat(plugin/project): support gen compile_commands.json for specific target by @fcying in https://github.com/xmake-io/xmake/pull/6572
+* improve ping #6579 by @waruqi in https://github.com/xmake-io/xmake/pull/6585
+* Fix objectonly targets by @waruqi in https://github.com/xmake-io/xmake/pull/6592
+* package(install): refine relative path generation in .pc files by @Doekin in https://github.com/xmake-io/xmake/pull/6597
+* New native Xcode project generator. by @JX-Master in https://github.com/xmake-io/xmake/pull/6411
+* rename copyright by @waruqi in https://github.com/xmake-io/xmake/pull/6602
+* fix project generator for c++modules by @waruqi in https://github.com/xmake-io/xmake/pull/6605
+* vsxmake: add cxx20 by @ChrisCatCP in https://github.com/xmake-io/xmake/pull/6612
+* fix: rust static and shared library failing to find extern crate in windows-msvc by @IMXEren in https://github.com/xmake-io/xmake/pull/6606
+* fix: the cmake module cannot get the option `cxxflags` correctly by @npc1054657282 in https://github.com/xmake-io/xmake/pull/6623
+* add sysroot to ldflags by @waruqi in https://github.com/xmake-io/xmake/pull/6622
+* (cmake) fix default flags detection on windows platform by @Arthapz in https://github.com/xmake-io/xmake/pull/6619
+* check options by @waruqi in https://github.com/xmake-io/xmake/pull/6626
 
 ## New Contributors
-* @per1cycle made their first contribution in https://github.com/xmake-io/xmake/pull/6146
-* @poirierlouis made their first contribution in https://github.com/xmake-io/xmake/pull/6149
-* @Sunrisepeak made their first contribution in https://github.com/xmake-io/xmake/pull/6225
-* @jnshuiji made their first contribution in https://github.com/xmake-io/xmake/pull/6286
-* @TimeKeepper made their first contribution in https://github.com/xmake-io/xmake/pull/6281
+* @DownerCase made their first contribution in https://github.com/xmake-io/xmake/pull/6567
+* @romeoxbm made their first contribution in https://github.com/xmake-io/xmake/pull/6588
+* @fcying made their first contribution in https://github.com/xmake-io/xmake/pull/6572
+* @JX-Master made their first contribution in https://github.com/xmake-io/xmake/pull/6411
+* @IMXEren made their first contribution in https://github.com/xmake-io/xmake/pull/6606
+* @npc1054657282 made their first contribution in https://github.com/xmake-io/xmake/pull/6623
 
-**Full Changelog**: https://github.com/xmake-io/xmake/compare/v2.9.8...v2.9.9</releaseNotes>
+**Full Changelog**: https://github.com/xmake-io/xmake/compare/v3.0.0...v3.0.1</releaseNotes>
 
     <!--<dependencies></dependencies>-->
   </metadata>
