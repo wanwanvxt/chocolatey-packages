@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = $env:ChocolateyPackageName
-$url = 'https://github.com/odin-lang/Odin/releases/download/dev-2025-07/odin-windows-amd64-dev-2025-07.zip'
-$archiveChecksum = '749db2ec3438f0eb3a05d1cb89cb071b83c96a072960e27c21f3a3d2590df500'
+$url = 'https://github.com/odin-lang/Odin/releases/download/dev-2025-08/odin-windows-amd64-dev-2025-08.zip'
+$archiveChecksum = 'a48b560e6f24ef5735456794dc9f10c9939d32ccb594fa5cbce0ff46587a66f9'
 $unzipLocation = Join-Path -Path (Get-ToolsLocation) -ChildPath $packageName
 
 Install-ChocolateyZipPackage -PackageName $packageName `

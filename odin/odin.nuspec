@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>odin</id>
-    <version>2025.07-dev</version>
+    <version>2025.08-dev</version>
     <packageSourceUrl>https://github.com/wanwanvxt/chocolatey-packages/tree/main/odin</packageSourceUrl>
     <owners>wanwan</owners>
 
@@ -98,78 +98,43 @@ The official blog of the Odin programming language, featuring announcements, new
 
 * The Odin compiler is still in development.</description>
     <releaseNotes>## New Language Features
-* Add `intrinsics.type_is_bit_field`
-* Add `@(no_sanitize_memory)` with additions to `base:sanitizer`
+*
 
 ## New Compiler Improvements
-* Correct spelling in `odin doc -help` output
-* Let `-test-all-packages` work with `-build-mode:test`
-* Fix package docs
-* Fix `swizzle` in `for in` statement
-* Fix `divti3` not being exported
-* Fix scope attribute proc grouping
-* Forbid multiple uses of `-sanitize`
-* `-vet-style`: Be strict with type switch case column alignment
-* Let compound literal array be broadcast to a struct field of arrays
-* Packages with `.odin` in the name no longer attempt to parse as odin files
-* Let `-no-entry-point` work for Windows DLLs
-* Guard against invalid proc types in parameter list
-* Push `context` onto stack before evaluating procedure parameters
-* Consider custom `#align` when determining union tag size
-* Ensure `volatile` status for all atomic operations
-* Fix WASM C ABI for raw unions
-* Fix invalid selector for acceleration structure
-* Fix `check_shift`
-* Forbid nested declaration of instrumentation procedures
-* Fix bug where compiler treated `uint` enums as `int`s
-* Fix load type panic because front-end allows a deref of a type
-* Added options to show, obfuscate, trim, and hide source code locations
-* Various fixes
+* General compiler bug fixes
+* `intrinsics.type_enum_is_contiguous`
+* `intrinsics.simd_runtime_swizzle`
+* Add iOS and iPhoneSimulator subtargets for `-target:darwin`
+* Fix `@(objc_implement)` methods not respecting `@(objc_is_class_method)`
+* `@(objc_name)`  attribute be inferrable
+* Add `Did you mean?` for `card`/`len`
+* `#+vet explicit-allocators`
+* Saner stack linker flags for WASM
+* Fix macos amd64 builds
+* amd64 ABI fixes regarding certain types of SIMD vectors
+
 
 ## New Packages
-* `vendor/kb_text_shape`
+*
 
 ## Package Improvements
-* Add examples/all/sdl3 for all sdl3 dependant packages
-* Rewrite `Atomic_RW_Mutex`
-* Add overlapped I/O bindings for Windows
-* Allow `odin check examples/all` for `js_wasm` target
-* Guard against negative `index` in `inject_at`
-* Print timings to stderr instead of stdout
-* Change `os2.user_*` on Windows to use `SHGetKnownFolderPath`
-* Add `core:os/os2` user dirs helper to retrieve common paths like Downloads, Videos, et al
-* Clarify `strconv.append_*` to `strconv.write_*`
-* Remove old @(deprecated) things.
-* DXC: Fixed broken bindings of `ICompiler` and `ICompiler2`
-* Fix GMT+/- timezone handling
-* Clarify `core:flags` variadic behaviors
-* Move `core:math/bìg` tests over to `core:testing` instead of using Python3 as an oracle
-* Add initial tests for big rationals
-* Sync chan refactor
-* Replace `core:posix` usage in `core:os/os2`
-* compat allocator improvements
-* Fix `pool_join` hangs if no threads are started
-* Fix early `join` after start
-* Expose `getpeername` in `core:net` package as `peer_endpoint`
-* Let tests expect assertion failures and signals raised
-* Get env buffer
-* Allow `core:net` to be imported with `-default-to-panic-allocator`
-* Update vendor:sdl3 from 3.2.10 to 3.2.16, and vendor:sdl3/image from 3.2.0 to 3.2.4
-* More `Buddy_Allocator` safeguards
-* Fix RegEx docs
-* Added TIOCGWINSZ to darwin, linux and freebsd
-* Escape object file paths properly during linker_stage
-* Fix `try_send` and `send`
-* Added `IS_SUPPORTED` to `core:sys/posix`
-* Fix issue parsing `vendor/stb/image` with the `core:odin/parser` parser
-* Fix memory leak in `core:math/big.internal_rat_norm`
-* raylib: Refer to Odin-style enum over original C enum
-* sys/linux: Unify `IPC_Flags` and `IPC_Mode` bit_sets
-* testing: Make test state changes its own feature
-* Add `slice.suffix_length`
-* Various fixes
+* Update `core:prof/spall` to version 3
+  * Adds @(no_instrumentation) to spall buffer and SCOPED operations
+* `core:hash/xxhash`: Static SIMD Support for XXH3
+* Minor fixes to `core:mem/virtual` edge cases
+* Unix build script for `kb_text_shape`
+* Add `IUnknown` UUID for win32 related code
+* `crypto/hash`: hash_bytes_to_buffer slice result to digest size
+* Minor fix to `-default-to-nil-allocator`
+* Disable filepath/match.odin and filepath/walk.odin compilation on js targets
+* Minor fixes to `SDL_image` save procedure that should return a boolean
+* Mach Process Control
+* Fix amd64 no-crt entry assembly
+* Add cgltf filter type and wrap mode enums
+* SDL2 - AudioAllowChangeFlags bit_set
+* `core:thread` - set stack size to rlimit for \*nix platforms
 
-**Full Changelog**: https://github.com/odin-lang/Odin/compare/dev-2025-06...dev-2025-07</releaseNotes>
+**Full Changelog**: https://github.com/odin-lang/Odin/compare/dev-2025-07...dev-2025-08</releaseNotes>
 
     <!--<dependencies></dependencies>-->
   </metadata>
